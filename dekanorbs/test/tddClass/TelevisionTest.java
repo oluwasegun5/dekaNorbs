@@ -215,10 +215,9 @@ public class TelevisionTest {
         tv.increaseChannel();
         tv.increaseChannel();
         //when
-        tv.decreaseChannel();
-        tv.decreaseChannel();
-        tv.decreaseChannel();
-        tv.decreaseChannel();
+        for (int i = 0; i < 5; i++) {
+            tv.decreaseChannel();
+        }
         //assert
         assertEquals(0,tv.getChannel());
     }

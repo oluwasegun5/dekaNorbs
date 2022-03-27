@@ -108,32 +108,10 @@ public class BikeTest {
         //given
         Bike powerBike = new Bike();
 
-        powerBike.accelerate();
-        powerBike.accelerate();
-        powerBike.accelerate();
-        powerBike.accelerate();
-        powerBike.accelerate();
-        powerBike.accelerate();
-        powerBike.accelerate();
-        powerBike.accelerate();
-        powerBike.accelerate();
-        powerBike.accelerate();// X10
-        powerBike.accelerate();
-        powerBike.accelerate();
-        powerBike.accelerate();
-        powerBike.accelerate();
-        powerBike.accelerate();
-        powerBike.accelerate();
-        powerBike.accelerate();
-        powerBike.accelerate();
-        powerBike.accelerate();
-        powerBike.accelerate();// X10   End Of Gear One
-        powerBike.accelerate();
-        powerBike.accelerate();
-        powerBike.accelerate();
-        powerBike.accelerate();
-        powerBike.accelerate();// End Of Gear Two
-        powerBike.accelerate();
+        for (int i = 0; i < 26; i++) {
+            powerBike.accelerate();
+        }
+
 
         //when
         powerBike.decelerate();

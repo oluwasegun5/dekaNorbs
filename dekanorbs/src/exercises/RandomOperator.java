@@ -40,28 +40,19 @@ public class RandomOperator {
                     if (num1 > num2){
                         ans = num1 - num2;
                         System.out.printf("%d - %d = ",num1,num2);
-                        userAns = input.nextInt();
-                        if (userAns == ans){
-                            System.out.println("Correct!!");
-                            correct++;
-                        }
-                        else {
-                            System.out.println("Wrong");
-                            wrong++;
-                        }
                     }
                     else {
                         ans = num2 - num1;
                         System.out.printf("%d - %d = ",num2,num1);
-                        userAns = input.nextInt();
-                        if (userAns == ans){
-                            System.out.println("Correct!!");
-                            correct++;
-                        }
-                        else {
-                            System.out.println("Wrong");
-                            wrong++;
-                        }
+                    }
+                    userAns = input.nextInt();
+                    if (userAns == ans){
+                        System.out.println("Correct!!");
+                        correct++;
+                    }
+                    else {
+                        System.out.println("Wrong");
+                        wrong++;
                     }
                     break;
                 case 3://multiplication
@@ -83,65 +74,48 @@ public class RandomOperator {
                     if(num1 > num2){
                         ans = num1 % num2;
                         System.out.print(num1+ " % "+num2+" = ");
-                        userAns = input.nextInt();
-                        if (userAns == ans){
-                            System.out.println("Correct!!");
-                            correct++;
-                        }
-                        else {
-                            System.out.println("Wrong");
-                            wrong++;
-                        }
                     }
                     else{
                         ans = num2 % num1;
                         System.out.print(num2+" % "+num1+" = ");
-                        userAns = input.nextInt();
 
-                        if (userAns == ans){
-                            System.out.println("Correct!!");
-                            correct++;
-                        }
-                        else {
-                            System.out.println("Wrong");
-                            wrong++;
-                        }
+                    }
+                    userAns = input.nextInt();
+                    if (userAns == ans){
+                        System.out.println("Correct!!");
+                        correct++;
+                    }
+                    else {
+                        System.out.println("Wrong");
+                        wrong++;
                     }
                     break;
                 case 5://division
                     if(num1 > num2){
                         ans =(double) num1/num2;
                         System.out.printf("%d / %d =",num1,num2);
-                        userAns = input.nextInt();
 
-                        if (userAns == ans){
-                            System.out.println("Correct!!");
-                            correct++;
-                        }
-                        else {
-                            System.out.println("Wrong");
-                            wrong++;
-                        }
                     }
                     else {
                         ans = (double)num2/num1;
 
                         System.out.printf("%d / %d",num2,num1);
-                        userAns = input.nextInt();
-                        if (userAns == ans){
-                            System.out.println("Correct!!");
-                            correct++;
-                        }
-                        else {
-                            System.out.println("Wrong");
-                            wrong++;
-                        }
+                    }
+                    userAns = input.nextInt();
+                    if (userAns == ans){
+                        System.out.println("Correct!!");
+                        correct++;
+                    }
+                    else {
+                        System.out.println("Wrong");
+                        wrong++;
                     }
                     break;
             }
 
         }
-        System.out.println("".repeat(4));
+        System.out.println("\n".repeat(5));
+
         System.out.printf("Correct = %d \t Wrong = %d",correct,wrong);
 
 

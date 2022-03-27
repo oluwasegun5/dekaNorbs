@@ -1,7 +1,8 @@
 package tddClass;
 
 public class AirConditioner {
-    private String power;
+
+    private boolean power;
     private int temperature;
 
 
@@ -12,32 +13,33 @@ public class AirConditioner {
 
 
 
-    public void powerOn() {
-        power = "on";
+    public void power() {
+        power = !power;
     }
 
-    public String getPower() {
+    public boolean isOn() {
         return power;
     }
 
-    public void powerOff() {
-        power = "off";
-    }
-
     public void increase() {
-        if(temperature < 30) {
-            temperature = temperature + 1;
+        if (isOn()) {
+            if (temperature < 30) {
+                temperature = temperature + 1;
+            }
         }
     }
 
     public int getTemp() {
 
-        return temperature;
+            return temperature;
+
     }
 
     public void decrease() {
-        if (temperature > 16) {
-            temperature -= 1;
+        if (isOn()) {
+            if (temperature > 16) {
+                temperature -= 1;
+            }
         }
     }
 }
