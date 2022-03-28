@@ -1,4 +1,4 @@
-package exercises;
+package myersBriggs;
 
 import java.util.Scanner;
 
