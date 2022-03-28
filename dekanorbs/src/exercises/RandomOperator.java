@@ -11,7 +11,8 @@ public class RandomOperator {
 
         int correct = 0;
         int  wrong = 0;
-        double ans;
+        int score = correct;
+        int ans;
 
 
 
@@ -92,14 +93,14 @@ public class RandomOperator {
                     break;
                 case 5://division
                     if(num1 > num2){
-                        ans =(double) num1/num2;
-                        System.out.printf("%d / %d =",num1,num2);
+                        ans = num1/num2;
+                        System.out.printf("%d / %d = ",num1,num2);
 
                     }
                     else {
-                        ans = (double)num2/num1;
+                        ans = num2/num1;
 
-                        System.out.printf("%d / %d",num2,num1);
+                        System.out.printf("%d / %d = ",num2,num1);
                     }
                     userAns = input.nextInt();
                     if (userAns == ans){
@@ -116,7 +117,7 @@ public class RandomOperator {
         }
         System.out.println("\n".repeat(5));
 
-        System.out.printf("Correct = %d \t Wrong = %d",correct,wrong);
+        System.out.printf("Correct = %d \t Wrong = %d\nTotal Score = %d",correct,wrong,score);
 
 
     }
