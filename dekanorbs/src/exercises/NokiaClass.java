@@ -4,11 +4,10 @@ import java.util.Scanner;
 
 public class NokiaClass {
 
-    Scanner input = new Scanner(System.in);
+    static Scanner scanner = new Scanner(System.in);
 
-    public int menu() {
-        int output = 0;
-        System.out.println("""
+    public static int menu() {
+        int output = inputNumber("""
                      1 => Phone book
                      2 => Messages
                      3 => Chat
@@ -23,15 +22,13 @@ public class NokiaClass {
                      12 => Profile
                      13 => SIM services\n
                     """);
-        output = input.nextInt();
-
         return output;
     }
 
 
-    public void phoneBook(){
+    public static void phoneBook(){
 
-        System.out.println("""
+        int phoneBook = inputNumber("""
                          1 => Search
                          2 => Service Nos
                          3 => Add name
@@ -43,7 +40,6 @@ public class NokiaClass {
                          9 => Speed dials
                          10 => Voice tags
                         """);
-        int phoneBook = input.nextInt();
         switch (phoneBook) {
             case 1 -> System.out.println("SEARCH");
             case 2 -> System.out.println("SERVICE NOs.");
@@ -53,11 +49,11 @@ public class NokiaClass {
             case 6 -> System.out.println("ASSIGN TONE");
             case 7 -> System.out.println("SEND b' CARD");
             case 8 -> {
-                System.out.println("""
+                int options = inputNumber("""
                         1 => Type of view
                         2 => Memory status
                         """);
-                int options = input.nextInt();
+
                 switch (options) {
                     case 1 -> System.out.println("TYPES OF VIEW");
                     case 2 -> System.out.println("MEMORY STATUS");
@@ -68,8 +64,8 @@ public class NokiaClass {
         }
     }
 
-    public void messages() {
-        System.out.println("""
+    public static void messages() {
+        int messages = inputNumber("""
                             1 => Write messages
                             2 => Inbox
                             3 => Outbox
@@ -81,8 +77,6 @@ public class NokiaClass {
                             9 => Voice mailbox number
                             10 => Service command editor
                             """);
-        int messages = input.nextInt();
-
         switch (messages) {
             case 1 -> System.out.println("WRITE MESSAGES");
             case 2 -> System.out.println("INBOX");
@@ -91,19 +85,19 @@ public class NokiaClass {
             case 5 -> System.out.println("TEMPLATES");
             case 6 -> System.out.println("SMILEYS");
             case 7 -> {
-                System.out.println("""
+                int messageSettings = inputNumber("""
                         1 => Set
                         2 => Common
                         """);
-                int messageSettings = input.nextInt();
+
                 switch (messageSettings) {
                     case 1 -> {
-                        System.out.println("""
+                        int set = inputNumber("""
                                 1 => Message centre number
                                 2 => Message sent as
                                 3 => Message validity
                                 """);
-                        int set = input.nextInt();
+
                         switch (set) {
                             case 1 -> System.out.println("MESSAGE CENTRE NUMBER");
                             case 2 -> System.out.println("MESSAGE SENT AS");
@@ -111,12 +105,12 @@ public class NokiaClass {
                         }
                     }
                     case 2 -> {
-                        System.out.println("""
+                        int common = inputNumber("""
                                 1 => Delivery reports
                                 2 => Reply via same centre
                                 3 => Character support
                                 """);
-                        int common = input.nextInt();
+
                         switch (common) {
                             case 1 -> System.out.println("DELIVERY REPORTS");
                             case 2 -> System.out.println("REPLY VIA SAME CENTRE");
@@ -132,5 +126,74 @@ public class NokiaClass {
 
     }
 
+    public static void callRegister(){
+        print("""
+                1 => Missed calls
+                2 => Received calls
+                3 => Dialled numbers
+                4 => Erase recent call lists
+                5 => Show call duration
+                6 => Show call costs
+                7 => Call cost Setting
+                8 => Prepaid credit
+                """);
+    }
 
+    public static void showCallDuration(){
+        int result = inputNumber("""
+                1 => Last call duration
+                2 => All call's duration
+                3 => Received call's duration
+                4 => Dialled call's duration
+                5 => Clear timers
+                """);
+        switch (result) {
+            case 1 -> print("LAST CALL DURATION");
+            case 2 -> print("ALL CALL'S DURATION");
+            case 3 -> print("RECEIVED CALL'S DURATION");
+            case 4 -> print("DIALLED CALL'S DURATION");
+            case 5 -> print("CLEAR TIMERS");
+        }
+    }
+    public static void showCallCosts(){
+        int result = inputNumber("""
+                1 => Last call cost
+                2 => All call cost
+                3 => Clear customer
+                """);
+        switch (result) {
+            case 1 -> print("LAST CALL COST");
+            case 2 -> print("ALL CALL COST");
+            case 3 -> print("CLEAR CUSTOMER");
+        }
+    }
+    public static void callCostSetting(){
+        int result = inputNumber("""
+                1 => Call cost limit
+                2 => Show costs in
+                """);
+
+    }
+
+
+
+
+
+
+
+    public static String input(String text){
+        print(text);
+        return scanner.nextLine();
+
+    }
+    public static int inputNumber(String text){
+        print(text);
+        return scanner.nextInt();
+
+    }
+
+
+    public static void print(String text){
+        System.out.println(text);
+    }
 }

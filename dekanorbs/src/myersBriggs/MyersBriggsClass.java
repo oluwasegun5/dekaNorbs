@@ -6,7 +6,6 @@ public class MyersBriggsClass {
      static Scanner input = new Scanner(System.in);
 
 
-
     public static String question1(){
         print("""
                  1.
@@ -18,7 +17,6 @@ public class MyersBriggsClass {
         return reply.toUpperCase();
 
     }
-
     public static String question2() {
         print("""
                  2.
@@ -29,7 +27,6 @@ public class MyersBriggsClass {
 
         return reply.toUpperCase();
     }
-
     public static String question3() {
         print("""
                 3.
@@ -200,19 +197,7 @@ public class MyersBriggsClass {
     }
 
 
-
-
     public static void print(String text){
         System.out.println(text);
-    }
-
-    public static void input(String text){
-         input.nextLine();
-    }
-    public static void input(int number){
-        input.nextInt();
-    }
-    public static void input(double number){
-        input.nextDouble();
     }
 }
