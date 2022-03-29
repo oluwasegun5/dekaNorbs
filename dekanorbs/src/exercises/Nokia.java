@@ -22,9 +22,13 @@ public class Nokia {
                 case 3:
                     System.out.println("Chat");
                     break;
-
+                case 4:
+                    NokiaClass.callRegister();
             }
 
         //phone.phoneBook(phone.menu());
+    }
+    public static void print(String text){
+        System.out.println(text);
     }
 }

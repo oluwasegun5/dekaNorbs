@@ -127,7 +127,7 @@ public class NokiaClass {
     }
 
     public static void callRegister(){
-        print("""
+        int result = inputNumber("""
                 1 => Missed calls
                 2 => Received calls
                 3 => Dialled numbers
@@ -137,9 +137,19 @@ public class NokiaClass {
                 7 => Call cost Setting
                 8 => Prepaid credit
                 """);
+        switch (result) {
+            case 1 -> print("MISSED CALLS");
+            case 2 -> print("RECEIVED CALLS");
+            case 3 -> print("DIALLED NUMBERS");
+            case 4 -> print("ERASE RECENT CALL LISTS");
+            case 5 -> showCallDuration();
+            case 6 -> showCallCosts();
+            case 7 -> callCostSetting();
+            case 8 -> print("PREPAID CREDIT");
+        }
     }
 
-    public static void showCallDuration(){
+    private static void showCallDuration(){
         int result = inputNumber("""
                 1 => Last call duration
                 2 => All call's duration
@@ -155,7 +165,7 @@ public class NokiaClass {
             case 5 -> print("CLEAR TIMERS");
         }
     }
-    public static void showCallCosts(){
+    private static void showCallCosts(){
         int result = inputNumber("""
                 1 => Last call cost
                 2 => All call cost
@@ -167,12 +177,15 @@ public class NokiaClass {
             case 3 -> print("CLEAR CUSTOMER");
         }
     }
-    public static void callCostSetting(){
+    private static void callCostSetting(){
         int result = inputNumber("""
                 1 => Call cost limit
                 2 => Show costs in
                 """);
-
+        switch (result) {
+            case 1 -> print("CALL COST LIMIT");
+            case 2 -> print("SHOW COST IN");
+        }
     }
 
 
@@ -181,19 +194,15 @@ public class NokiaClass {
 
 
 
-    public static String input(String text){
-        print(text);
-        return scanner.nextLine();
 
-    }
-    public static int inputNumber(String text){
+    private static int inputNumber(String text){
         print(text);
         return scanner.nextInt();
 
     }
 
 
-    public static void print(String text){
+    private static void print(String text){
         System.out.println(text);
     }
 }
