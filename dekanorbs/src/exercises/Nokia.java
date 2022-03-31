@@ -12,19 +12,21 @@ public class Nokia {
 
 
             int menu = NokiaClass.menu();
-            switch(menu){
-                case 1:
-                    NokiaClass.phoneBook();
-                    break;
-                case 2:
-                    NokiaClass.messages();
-                    break;
-                case 3:
-                    System.out.println("Chat");
-                    break;
-                case 4:
-                    NokiaClass.callRegister();
-            }
+        switch (menu) {
+            case 1 -> NokiaClass.phoneBook();
+            case 2 -> NokiaClass.messages();
+            case 3 -> System.out.println("Chat");
+            case 4 -> NokiaClass.callRegister();
+            case 5 -> NokiaClass.tones();
+            case 6 -> NokiaClass.setting();
+            case 7 -> print("CALL DIVERT");
+            case 8 -> print("GAMES");
+            case 9 -> print("CALCULATOR");
+            case 10 -> print("REMINDER");
+            case 11 -> NokiaClass.clock();
+            case 12 -> print("PROFILES");
+            case 13 -> print("SIM SERVICES");
+        }
 
         //phone.phoneBook(phone.menu());
     }

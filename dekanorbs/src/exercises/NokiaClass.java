@@ -7,7 +7,7 @@ public class NokiaClass {
     static Scanner scanner = new Scanner(System.in);
 
     public static int menu() {
-        int output = inputNumber("""
+        return inputNumber("""
                      1 => Phone book
                      2 => Messages
                      3 => Chat
@@ -22,7 +22,6 @@ public class NokiaClass {
                      12 => Profile
                      13 => SIM services\n
                     """);
-        return output;
     }
 
 
@@ -188,11 +187,102 @@ public class NokiaClass {
         }
     }
 
+    public static void tones(){
+        int response = inputNumber("""
+                1 => Ringing Tone
+                2 => Ringing volume
+                3 => Incoming call alert
+                4 => Composer
+                5 =. Message alert tone
+                6 => Keypad tone
+                7 => Warning and game tone
+                8 => Vibrating alert
+                9 => Screen saver
+                """);
+        switch (response) {
+            case 1 -> print("RINGING TONE");
+            case 2 -> print("RINGING VOLUME");
+            case 3 -> print("INCOMING CALL ALERT");
+            case 4 -> print("COMPOSER");
+            case 5 -> print("MESSAGE ALERT TONE");
+            case 6 -> print("KEYBOARD TONE");
+            case 7 -> print("WARNING AND GAME TONE");
+            case 8 -> print("VIBRATING ALERT");
+            case 9 -> print("SCREEN SAVER");
+        }
+    }
 
+    public static void setting() {
+        int response = inputNumber("""
+                1 => Call setting
+                2 => Phone setting
+                3 => Security setting
+                4 => Restore factory setting
+                """);
+        switch (response) {
+            case 1 -> callSetting();
+            case 2 -> phoneSetting();
+            case 3 -> securitySetting();
+            case 4 -> print("RESTORE FACTORY SETTING");
+        }
+    }
 
+    private static void securitySetting() {
+        int response = inputNumber("""
+                1 => PIN code request
+                2 => Call barring service
+                3 => Fixed dialling
+                4 => Closed user group
+                5 => Phone security
+                6 => Change access codes
+                """);
+        switch (response) {
+            case 1 -> print("PIN CODE REQUEST");
+            case 2 -> print("CALL BARRING SERVICE");
+            case 3 -> print("FIXED DIALLING");
+            case 4 -> print("CLOSED USER GROUP");
+            case 5 -> print("PHONE SECURITY");
+            case 6 -> print("CHANGE ACCESS CODES");
+        }
+    }
 
+    private static void phoneSetting() {
+        int response = inputNumber("""
+                1 => Language
+                2 => Cell info display
+                3 => Welcome note
+                4 => Network selection
+                5 => Light
+                6 => Confirm SIM service action
+                """);
+        switch (response) {
+            case 1 -> print("LANGUAGE");
+            case 2 -> print("CELL INFO DISPLAY");
+            case 3 -> print("WELCOME NOTE");
+            case 4 -> print("NETWORK SELECTION");
+            case 5 -> print("LIGHT");
+            case 6 -> print("CONFIRM SIM SERVICE");
+        }
+    }
 
-
+    private static void callSetting() {
+        int response = inputNumber("""
+                1 => Automatic redial
+                2 => Speed dialling
+                3 => Call waiting options
+                4 => Own number sending
+                5 => Phone line in use
+                6 => Automatic answer
+                """);
+        switch (response) {
+            case 1 -> print("AUTOMATIC REDIAL");
+            case 2 -> print("SPEED DIALLING");
+            case 3 -> print("CALL WAITING OPTIONS");
+            case 4 -> print("OWN NUMBER SENDING");
+            case 5 -> print("PHONE LINE IN USE");
+            case 6 -> print("AUTOMATIC ANSWER");
+        }
+    }
 
 
     private static int inputNumber(String text){
@@ -204,5 +294,25 @@ public class NokiaClass {
 
     private static void print(String text){
         System.out.println(text);
+    }
+
+
+    public static void clock() {
+        int response = inputNumber("""
+                1 => Alarm clock
+                2 => Clock setting
+                3 => Date setting
+                4 => Stopwatch
+                5 => Countdown timer
+                6 => Auto update of date and time
+                """);
+        switch (response) {
+            case 1 -> print("ALARM CLOCK");
+            case 2 -> print("CLOCK SETTING");
+            case 3 -> print("DATE SETTING");
+            case 4 -> print("STOPWATCH");
+            case 5 -> print("COUNTDOWN TIMER");
+            case 6 -> print("AUTO GENERATE OF DATE AND TIME");
+        }
     }
 }
