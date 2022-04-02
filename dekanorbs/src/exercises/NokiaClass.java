@@ -20,7 +20,7 @@ public class NokiaClass {
                      10 => Reminders
                      11 => Clock
                      12 => Profile
-                     13 => SIM services\n
+                     13 => SIM services
                     """);
     }
 
