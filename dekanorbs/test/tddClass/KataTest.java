@@ -18,9 +18,7 @@ public class KataTest {
     @Test
     public void addTest(){
 
-        Kata calculator = new Kata();
-
-        int actual = calculator.add(7,8);
+        int actual = kata.add(7,8);
 
         assertEquals(15,actual);
     }
@@ -63,7 +61,6 @@ public class KataTest {
         //kata.quotient(25,5);
         //assert
         assertEquals(2,kata.quotient(2,4));
-
     }
     @Test
     public void test(){
@@ -115,4 +112,22 @@ public class KataTest {
 
         assertTrue(kata.isPrimeNumber(11));
     }
+    @Test
+    public void maximumNumberInArrayTest(){
+        int[] score = {34,23,14,45,23};
+
+        assertEquals(45,kata.findMaximumFrom(score));
+    }
+    @Test
+    public void minimumNumberInArrayTest(){
+        int[] score = {34,23,14,45,23};
+
+        assertEquals(14,kata.findMinimumFrom(score));
+    }
+    @Test
+    public void averageNumberInArrayTest(){
+        int[] score = {34,23,14,45,23};
+        assertEquals(27,kata.findAverageFrom(score));
+    }
+
 }

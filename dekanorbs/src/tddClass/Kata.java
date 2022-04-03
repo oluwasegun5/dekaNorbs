@@ -40,21 +40,6 @@ public class Kata {
         return price;
     }
 
-    /*public int buyApp(int copies) {
-        int price = 0;
-
-        if(copies > 0 && copies < 5)price = 2000;
-        else if(copies > 4 && copies < 10) price = 1800;
-        else if(copies > 9 && copies < 30) price = 1600;
-        else if(copies > 29 && copies < 50) price = 1500;
-        else if(copies > 49 && copies < 100) price = 1300;
-        else if(copies > 99 && copies < 200) price = 1200;
-        else if(copies > 199 && copies < 500) price = 1100;
-        else if(copies >499) price = 1000;
-
-        return copies * price;
-    }*/
-
     public int quotient(int number1, int number2) {
         int answer;
 
@@ -114,5 +99,29 @@ public class Kata {
         }
         if (count <= 2) result = true;
         return  result;
+    }
+
+    public int findMaximumFrom(int[] array) {
+        int maximum = 0;
+        for (int j : array) {
+            if (j > maximum) maximum = j;
+        }
+        return maximum;
+    }
+
+    public int findMinimumFrom(int[] array) {
+        int minimum = array[0];
+        for (int j : array) {
+            if (j < minimum) minimum = j;
+        }
+        return minimum;
+    }
+
+    public int findAverageFrom(int[] array) {
+        int average = 0;
+        for (int j : array) {
+            average += j;
+        }
+        return average/array.length;
     }
 }
