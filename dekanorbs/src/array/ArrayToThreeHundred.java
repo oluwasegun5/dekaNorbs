@@ -1,4 +1,4 @@
-package exercises;
+package array;
 
 public class ArrayToThreeHundred {
     public static void main(String[] args) {

@@ -110,7 +110,7 @@ public class KataTest {
     @Test
     public void primeNumbersTest(){
 
-        assertTrue(kata.isPrimeNumber(11));
+        assertTrue(kata.isPrimeNumber(31));
     }
     @Test
     public void maximumNumberInArrayTest(){

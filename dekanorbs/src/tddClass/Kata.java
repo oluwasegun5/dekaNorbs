@@ -117,11 +117,16 @@ public class Kata {
         return minimum;
     }
 
-    public int findAverageFrom(int[] array) {
-        int average = 0;
+    private int findSumFrom(int[] array) {
+        int sum = 0;
         for (int j : array) {
-            average += j;
+            sum += j;
         }
-        return average/array.length;
+        return sum;
+    }
+
+    public int findAverageFrom(int[] array) {
+        return findSumFrom(array)/array.length;
+
     }
 }
