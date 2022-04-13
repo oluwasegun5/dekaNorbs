@@ -15,7 +15,7 @@ public class AccountMain {
 
         int balance = ademolaAccount.getBalance();
 
-        System.out.printf("Your new balance is %d%n", balance);
+        System.out.printf("Your new getBalance is %d%n", balance);
 
     }
 }
