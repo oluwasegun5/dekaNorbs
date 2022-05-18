@@ -130,4 +130,11 @@ public class KataTest {
         assertEquals(27,kata.findAverageFrom(score));
     }
 
+    @Test
+    public void collectInput(){
+        String name = "segun";
+
+        assertEquals("segun",kata.putName(name));
+    }
+
 }

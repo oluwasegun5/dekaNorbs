@@ -1,5 +1,7 @@
 package tddClass;
 
+import java.util.Scanner;
+
 public class Kata {
 
 
@@ -128,5 +130,10 @@ public class Kata {
     public int findAverageFrom(int[] array) {
         return findSumFrom(array)/array.length;
 
+    }
+
+    public String putName(String name) {
+        Scanner input = new Scanner(System.in);
+        return name;
     }
 }

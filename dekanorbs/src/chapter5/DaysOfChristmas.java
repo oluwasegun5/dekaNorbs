@@ -1,4 +1,4 @@
-package exercises;
+package chapter5;
 
 public class DaysOfChristmas {
     public static void main(String... args){
