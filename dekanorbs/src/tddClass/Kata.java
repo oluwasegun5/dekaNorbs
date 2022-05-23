@@ -136,4 +136,8 @@ public class Kata {
         Scanner input = new Scanner(System.in);
         return name;
     }
+    public int[] intArray(){
+        int[] numbers = new int[20];
+        return numbers;
+    }
 }

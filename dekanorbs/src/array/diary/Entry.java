@@ -1,38 +1,32 @@
 package array.diary;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class Entry {
+    DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd");
+    LocalDateTime now = LocalDateTime.now();
     String[] entries = new String[3];
-    Date date = new Date();
-    SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
 
     public Entry(){
-        entries[2] = formatter.format(date);
-    }
-    public Entry(String title, String body){
-        entries[0] = title;
-        entries[1] = body;
-        entries[2] = formatter.format(date);
+        entries[0] = dtf.format(now);
     }
     public void writeTitle(String title) {
-        entries[0] = title;
-    }
-
-    public String getTitle() {
-        return entries[0];
+        entries[1] = title;
     }
 
     public void writeBody(String body) {
-        entries[1] = body;
+        entries[2] = body;
     }
 
-    public String getBody() {
+    public String getTitle() {
         return entries[1];
     }
 
-    public String getDate() {
-        return formatter.format(date);
+    public String getBody() {
+        return entries[2];
+    }
+    public String getDate(){
+        return entries[0];
     }
 }

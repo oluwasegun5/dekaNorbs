@@ -11,57 +11,32 @@ public class DiaryTest {
     Diary diary;
     @BeforeEach
     void setUp(){
-        diary = new Diary();
+        diary = new Diary("username", 1234);
     }
     @Test
-    public void diaryIsNotEmpty(){
-        Diary diary = new Diary();
+    public void diaryCanBeCreated(){
         assertNotNull(diary);
     }
 
     @Test
-    public void signUpToDiary(){
-        diary.signUp("segun","1234","1234");
+    public void usernameTest(){
+        assertEquals("username", diary.getUsername());
+    }
+    @Test
+    public void writeEntryTest(){
+        Diary.login(1234);
 
+        Diary.write("my title","ok o");
+        assertEquals("ok o", Diary.findByTitle("my title"));
     }
 
     @Test
-    public void login(){
-        diary.signUp("segun","1234","1234");
-        diary.login("segun","1234");
+    public void findEntryTest(){
+        Diary.login(1234);
+        Diary.write("my title","ok o");
+        Diary.write("my name","segun");
+        Diary.write("my cat","cat");
+
+        assertEquals("cat", Diary.findByTitle("my cat"));
     }
-
-    @Test
-    public void writeTitle(){
-        diary.signUp("segun","1234","1234");
-        diary.login("segun","1234");
-
-        diary.writeNewEntry("my Title","my body");
-    }
-
-    @Test
-    public void findbyTitleTest(){
-        diary.signUp("segun","1234","1234");
-        diary.login("segun","1234");
-
-        diary.writeNewEntry("my Title","my body");
-        diary.writeNewEntry("Title","body");
-        diary.writeNewEntry("adeayo","oluwasegun");
-
-        assertEquals("oluwasegun",diary.findByTitle("adeayo"));
-    }
-
-    @Test
-    public void deleteByTitleTest(){
-        diary.signUp("segun","1234","1234");
-        diary.login("segun","1234");
-
-        diary.writeNewEntry("my Title","my body");
-        diary.writeNewEntry("Title","body");
-        diary.writeNewEntry("adeayo","oluwasegun");
-        diary.deleteEntry("adeayo");
-
-        assertEquals("adeayo can not be found!",diary.findByTitle("adeayo"));
-    }
-
 }
