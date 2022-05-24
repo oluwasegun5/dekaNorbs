@@ -107,7 +107,4 @@ public class TurtleTest {
         assertEquals(EAST, ijapa.currentDirection());
     }
 
-
-    
-
 }

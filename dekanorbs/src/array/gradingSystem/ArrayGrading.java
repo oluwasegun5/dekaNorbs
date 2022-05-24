@@ -6,12 +6,6 @@ public class ArrayGrading {
     static Scanner scanner = new Scanner(System.in);
 
 
-
-
-
-
-
-
 static void subjectSummary(int[][] array){
     print("\n");
     print("SUBJECT SUMMARY");

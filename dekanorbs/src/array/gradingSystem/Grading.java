@@ -37,12 +37,11 @@ public class Grading {
     private static void total() {
         int total = 0;
         for (int i = 0; i < students.length; i++) {
-            total = 0;
             for (int j = 0; j < students[i].length; j++) {
                 total += students[i][j];
             }
-            System.out.print(total);
         }
+        System.out.printf("%11d",total);
     }
     public static void loadArray(){
         for (int student = 0; student < row; student++) {

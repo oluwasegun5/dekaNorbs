@@ -47,7 +47,9 @@ public class GradeTest {
     }
     @Test
     public void testForStudentTotal(){
-        int[][] grades = {{30,70,50},{20,60,20},{80,5,5}};
+        int[][] grades = {{30,70,50},
+                          {20,60,20},
+                          {80,5,5}};
 
         StudentGradeReport report = new StudentGradeReport(grades);
 
