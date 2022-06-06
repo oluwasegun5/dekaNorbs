@@ -5,6 +5,7 @@ import static theCreativeTurtle.Direction.*;
 public class Turtle {
     private final Pen biro = new Pen();
     private Direction direction = EAST;
+    private Position position = new Position(0,0);
 
     public boolean isPenDown() {
         return biro.penState() == PenPosition.DOWN;
@@ -44,4 +45,12 @@ public class Turtle {
         direction = to;
     }
 
+    public void move(int noOfSteps) {
+        switch (currentDirection()) {
+            case EAST -> position.setColumn(noOfSteps-1);
+            case NORTH -> turn(WEST);
+            case WEST -> turn(SOUTH);
+            case SOUTH -> turn(EAST);
+        }
+    }
 }

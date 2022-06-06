@@ -2,6 +2,7 @@ package turtleTest;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import theCreativeTurtle.Position;
 import theCreativeTurtle.Turtle;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -106,5 +107,6 @@ public class TurtleTest {
         ijapa.turnLeft();
         assertEquals(EAST, ijapa.currentDirection());
     }
+
 
 }

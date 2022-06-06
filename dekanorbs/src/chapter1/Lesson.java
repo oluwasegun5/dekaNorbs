@@ -1,11 +1,15 @@
 package chapter1;
 
-/**import java.util.Scanner;
+import java.util.Scanner;
 
 public class Lesson {
 
     public static void main(String[] args) {
-
+        int t =0;
+        for (int i = 10; i >= 1;t +=1, i--) {
+            System.out.println(i);
+        }
+/**
         Scanner input = new Scanner(System.in);
 
         int numb;
@@ -24,7 +28,6 @@ public class Lesson {
     int sum = numb + numb1 + numb2;
         System.out.println("sum : "  +sum);
 
-
+(*/
     }
 }
-**/

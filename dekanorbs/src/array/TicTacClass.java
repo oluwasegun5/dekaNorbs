@@ -28,7 +28,7 @@ public class TicTacClass {
     }
     public static void play(){
         int count = 0;
-        while (count <9 || isWin == true) {
+        while (count <9 || isWin) {
             System.out.printf("%c's turn \n", currentPlayer);
             int num = scanner.nextInt();
             System.out.flush();
