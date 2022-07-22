@@ -1,4 +1,4 @@
-package array.hugeInteger;
+package dataStructure.hugeInteger;
 
 public class HugeInteger {
     private int numberOfDigits;

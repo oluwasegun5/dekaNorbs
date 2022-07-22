@@ -1,6 +1,6 @@
 package hugeIntegerTest;
 
-import array.hugeInteger.HugeInteger;
+import dataStructure.hugeInteger.HugeInteger;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

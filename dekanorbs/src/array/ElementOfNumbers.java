@@ -1,5 +1,6 @@
 package array;
 
+import javax.swing.*;
 import java.security.SecureRandom;
 import java.util.Arrays;
 
@@ -21,3 +22,4 @@ public class ElementOfNumbers {
         System.out.printf(" Maximum number is: %d\n Sum of the numbers is: %d\n Average of the numbers is: %d",maximum,sum,sum/10);
     }
 }
+

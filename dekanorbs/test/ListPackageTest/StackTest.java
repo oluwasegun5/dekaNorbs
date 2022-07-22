@@ -1,6 +1,6 @@
 package ListPackageTest;
 
-import array.listPackage.Stack;
+import dataStructure.listPackage.Stack;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

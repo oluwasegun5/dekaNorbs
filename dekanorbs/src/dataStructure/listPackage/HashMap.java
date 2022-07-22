@@ -1,4 +1,4 @@
-package array.listPackage;
+package dataStructure.listPackage;
 
 
 

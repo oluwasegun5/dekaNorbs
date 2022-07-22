@@ -1,4 +1,4 @@
-package array.listPackage;
+package dataStructure.listPackage;
 
 public class Set {
     ArrayList<Number> set = new ArrayList<Number>();

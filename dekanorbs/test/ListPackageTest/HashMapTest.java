@@ -1,6 +1,6 @@
 package ListPackageTest;
 
-import array.listPackage.HashMap;
+import dataStructure.listPackage.HashMap;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

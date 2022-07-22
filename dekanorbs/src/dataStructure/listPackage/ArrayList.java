@@ -1,4 +1,4 @@
-package array.listPackage;
+package dataStructure.listPackage;
 
 public class ArrayList<I extends Number> {
     private int size;

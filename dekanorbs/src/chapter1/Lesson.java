@@ -1,33 +1,75 @@
 package chapter1;
 
-import java.util.Scanner;
+//import java.util.*;
+//
+//public class Bowling {
+//    HashMap<String, Integer> players;
+//    Bowling() {
+//        players = new HashMap<String, Integer>();
+//    }
+//    public void addPlayer(String name, int p) {
+//        players.put(name, p);
+//    }
+//    //your code goes here
+//    public String getWinner(){
+//        int highest =0;
+//        String name = "";
+//        for(Map.Entry<String, Integer> entry: players.entrySet()) {
+//            if(entry.getValue() > highest)name = entry.getKey();
+//        }
+//        return name;
+//    }
+//
+//}
+//
+//public class Lesson {
+//    public static void main(String[ ] args) {
+//        Bowling game = new Bowling();
+//        Scanner sc = new Scanner(System.in);
+//
+//        for(int i=0;i<3;i++) {
+//            String input = sc.nextLine();
+//            String[] values = input.split(" ");
+//            String name = values[0];
+//            int points = Integer.parseInt(values[1]);
+//            game.addPlayer(name, points);
+//        }
+//        game.getWinner();
+//    }
+//}
+class SampleDemo implements Runnable {
 
-public class Lesson {
+    private Thread t;
+    private String threadName;
 
-    public static void main(String[] args) {
-        int t =0;
-        for (int i = 10; i >= 1;t +=1, i--) {
-            System.out.println(i);
+    SampleDemo (String threadName){
+        this.threadName = threadName;
+    }
+
+    public void run()
+    {
+        while (true)
+            System.out.print(threadName);
+    }
+
+    public void start ()
+    {
+        if (t == null)
+        {
+            t = new Thread (this, threadName);
+            t.start ();
         }
-/**
-        Scanner input = new Scanner(System.in);
+    }
+}
 
-        int numb;
-        System.out.println("Enter the first integer: ");
-        numb = input.nextInt();
+class TestThread {
 
+    public static void main(String args[]) {
 
-        int numb1;
-        System.out.println("Enter the second integer : ");
-        numb1 = input.nextInt();
+        SampleDemo A = new SampleDemo( "A");
+        SampleDemo B = new SampleDemo( "B");
 
-        int numb2;
-        System.out.println("Enter the third integer : ");
-        numb2 = input.nextInt();
-
-    int sum = numb + numb1 + numb2;
-        System.out.println("sum : "  +sum);
-
-(*/
+        B.start();
+        A.start();
     }
 }
