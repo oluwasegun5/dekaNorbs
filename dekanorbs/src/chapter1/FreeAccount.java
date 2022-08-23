@@ -3,6 +3,8 @@ package chapter1;
 import java.util.Scanner;
 
 public class FreeAccount {
+    AccountMain mn = new AccountMain();
+
 
     private int balance;
 
